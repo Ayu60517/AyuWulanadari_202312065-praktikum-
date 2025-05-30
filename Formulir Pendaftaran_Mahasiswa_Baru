@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulir Pendaftaran Mahasiswa Baru</title>
+</head>
+<body style="background-color:#f4f4f4; margin: 40px; font-family: Arial, sans-serif;">
+
+    <!-- Logo kampus STITEK Bontang -->
+    <img src="logo.jpg" alt="Logo STITEK Bontang" width="100" onerror="this.style.display='none'">
+
+    <!-- Judul halaman utama -->
+    <h1>Formulir Pendaftaran Mahasiswa Baru</h1>
+
+    <!-- Formulir pendaftaran mahasiswa -->
+    <form id="formPendaftaran">
+
+        <!-- Bagian: Data Pribadi -->
+        <fieldset style="background-color: #ffffff; padding: 15px;">
+            <legend>Data Pribadi</legend>
+
+            <!-- Input nama lengkap -->
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama" placeholder="Contoh: Ayu Wulanadari" required><br><br>
+
+            <!-- Input email -->
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="contoh@email.com" required><br><br>
+
+            <!-- Input radio jenis kelamin -->
+            <label>Jenis Kelamin:</label><br>
+            <input type="radio" id="pria" name="gender" value="Pria" required>
+            <label for="pria">Pria</label>
+            <input type="radio" id="wanita" name="gender" value="Wanita">
+            <label for="wanita">Wanita</label><br><br>
+        </fieldset>
+
+        <!-- Bagian: Hobi -->
+        <fieldset style="background-color: #ffffff; padding: 15px;">
+            <legend>Hobi</legend>
+
+            <!-- Checkbox pilihan hobi -->
+            <input type="checkbox" id="membaca" name="hobi" value="Membaca">
+            <label for="membaca">Membaca</label><br>
+            <input type="checkbox" id="olahraga" name="hobi" value="Olahraga">
+            <label for="olahraga">Olahraga</label><br>
+            <input type="checkbox" id="musik" name="hobi" value="Musik">
+            <label for="musik">Musik</label><br><br>
+        </fieldset>
+
+        <!-- Bagian: Pilihan Jurusan -->
+        <fieldset style="background-color: #ffffff; padding: 15px;">
+            <legend>Pilihan Jurusan</legend>
+
+            <!-- Dropdown pilihan jurusan -->
+            <label for="jurusan">Pilih Jurusan:</label><br>
+            <select id="jurusan" name="jurusan" required>
+                <option value="">-- Pilih Jurusan --</option>
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Manajemen">Manajemen</option>
+                <option value="Akuntansi">Akuntansi</option>
+            </select><br><br>
+        </fieldset>
+
+        <!-- Bagian: Alamat -->
+        <fieldset style="background-color: #ffffff; padding: 15px;">
+            <legend>Alamat</legend>
+
+            <!-- Textarea alamat lengkap -->
+            <label for="alamat">Alamat Lengkap:</label><br>
+            <textarea id="alamat" name="alamat" rows="4" cols="40" placeholder="Contoh: Jl. Merdeka No. 10, Bontang"></textarea><br><br>
+        </fieldset>
+
+        <!-- Tombol submit untuk mengirim data -->
+        <input type="submit" value="Kirim Formulir" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer;">
+    </form>
+
+    <!-- Pesan sukses setelah formulir dikirim -->
+    <p id="pesanSukses" style="color: green; font-weight: bold; display: none; margin-top: 20px;">
+        Formulir berhasil dikirim!
+    </p>
+
+    <!-- Tautan ke situs resmi STITEK Bontang -->
+    <p style="margin-top: 20px;">Kunjungi <a href="https://www.stitek.ac.id/" target="_blank">situs resmi STITEK Bontang</a> untuk informasi lebih lanjut.</p>
+
+    <!-- Script JavaScript untuk validasi pengiriman dan menampilkan pesan sukses -->
+    <script>
+    document.getElementById("formPendaftaran").addEventListener("submit", function(e) {
+        e.preventDefault(); // Cegah pengiriman default form
+        document.getElementById("pesanSukses").style.display = "block"; // Tampilkan pesan sukses
+        this.reset(); // Reset isi form
+    });
+    </script>
+
+</body>
+</html>

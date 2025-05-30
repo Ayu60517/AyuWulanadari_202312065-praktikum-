@@ -1,0 +1,14 @@
+<table border="1">
+    <tr>
+        <th>Nama buah</th>
+        <th>Jumlah</th>
+    </tr>
+    <tr>
+        <td>Pir </td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>Apel</td>
+        <td>3</td>
+    </tr>
+</table>
