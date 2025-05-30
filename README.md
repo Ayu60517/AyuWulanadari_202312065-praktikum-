@@ -1,0 +1,1 @@
+# AyuWulanadari_202312065-praktikum-
